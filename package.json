@@ -5,11 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib dist",
-    "build": "babel lib --out-dir lib",
-    "lint": "eslint lib test examples",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive",
-    "test:watch": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive --watch",
-    "prepublish": "npm run lint && npm run test && npm run clean && npm run build"
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
